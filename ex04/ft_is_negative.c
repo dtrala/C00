@@ -6,7 +6,7 @@
 /*   By: dlascaba <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/07 23:21:32 by dlascaba          #+#    #+#             */
-/*   Updated: 2021/07/07 23:26:41 by dlascaba         ###   ########.fr       */
+/*   Updated: 2021/07/08 17:52:26 by dlascaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 void	ft_is_negative(int n)
 {
 
-	if (n < 0 )
-		write(1, 'N', 1);
-	else (n > 0)
-		write(1, 'P', 1);
+	if (n < 0)
+		write(1, "N", 1);
+	else
+		write(1, "P", 1);
 
 }
+
+

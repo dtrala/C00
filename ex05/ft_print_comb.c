@@ -1,20 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlascaba <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/08 17:35:46 by dlascaba          #+#    #+#             */
-/*   Updated: 2021/07/08 17:35:51 by dlascaba         ###   ########.fr       */
+/*   Created: 2021/07/08 17:54:50 by dlascaba          #+#    #+#             */
+/*   Updated: 2021/07/08 18:11:36 by dlascaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include <unistd.h>
 
-void ft_putchar(char c)
+void	ft_print_comb(void)
 {
-	write(1, &c, 1);
+	char buf[5];
+	
+	buf[0] = '0' - 1;
+	buf[3] = ',';
+	buf[4] = ' ';
+	while (++buf[0] <= '6')
+	{
+		buf[1] = buf[0];
+		while (++buf[1] <= '8')
+		{
+			buf[2] = buf[1];
+			while (++buf[2] <= '9')
+			{
+
+				write(1, buf, 5);
+
+			}
+		}
+	
+	}
+	write(1, "789", 3);
 }
+
 
