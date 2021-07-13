@@ -6,7 +6,7 @@
 /*   By: dlascaba <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/08 17:54:50 by dlascaba          #+#    #+#             */
-/*   Updated: 2021/07/08 18:11:36 by dlascaba         ###   ########.fr       */
+/*   Updated: 2021/07/12 22:05:36 by dlascaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,28 @@
 
 void	ft_print_comb(void)
 {
-	char buf[5];
-	
-	buf[0] = '0' - 1;
-	buf[3] = ',';
-	buf[4] = ' ';
-	while (++buf[0] <= '6')
+	char	nub1;
+	char	nub2;
+	char	nub3;
+
+	nub1 = '0';
+	while (nub1 <= '9')
 	{
-		buf[1] = buf[0];
-		while (++buf[1] <= '8')
+		nub2 = nub1 + 1;
+		while (nub2 <= '9')
 		{
-			buf[2] = buf[1];
-			while (++buf[2] <= '9')
+			nub3 = nub2 + 1;
+			while (nub3 <= '9')
 			{
-
-				write(1, buf, 5);
-
+				write(1, &nub1, 1);
+				write(1, &nub2, 1);
+				write(1, &nub3, 1);
+				if (!(nub1 == '7' && nub2 == '8' && nub3 == '9'))
+					write(1, ",", 2);
+				nub3++;
 			}
+			nub2++;
 		}
-	
+		nub1++;
 	}
-	write(1, "789", 3);
 }
-
-

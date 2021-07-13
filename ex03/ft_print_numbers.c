@@ -6,7 +6,7 @@
 /*   By: dlascaba <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/07 23:12:39 by dlascaba          #+#    #+#             */
-/*   Updated: 2021/07/07 23:19:11 by dlascaba         ###   ########.fr       */
+/*   Updated: 2021/07/12 19:27:16 by dlascaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -14,7 +14,4 @@
 void	ft_print_numbers(void)
 {
 	write(1, "0123456789", 10);
-
 }
-
-

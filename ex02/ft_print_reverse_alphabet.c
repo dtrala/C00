@@ -6,7 +6,7 @@
 /*   By: dlascaba <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/08 17:37:18 by dlascaba          #+#    #+#             */
-/*   Updated: 2021/07/08 17:37:27 by dlascaba         ###   ########.fr       */
+/*   Updated: 2021/07/12 19:25:53 by dlascaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,12 @@
 
 void	ft_print_reverse_alphabet(void)
 {
-	char zeta;
+	char	zeta;
 
 	zeta = 'z';
 	while (zeta >= 'a')
 	{
-	
 		write(1, &zeta, 1);
 		--zeta;
-
 	}
-
 }
-
-
-

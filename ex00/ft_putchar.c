@@ -6,15 +6,13 @@
 /*   By: dlascaba <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/08 17:35:46 by dlascaba          #+#    #+#             */
-/*   Updated: 2021/07/08 17:35:51 by dlascaba         ###   ########.fr       */
+/*   Updated: 2021/07/12 19:22:37 by dlascaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include <unistd.h>
 
-void ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
-

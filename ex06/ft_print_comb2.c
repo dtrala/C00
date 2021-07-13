@@ -1,25 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   fr_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlascaba <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/08 17:36:29 by dlascaba          #+#    #+#             */
-/*   Updated: 2021/07/12 19:24:02 by dlascaba         ###   ########.fr       */
+/*   Created: 2021/07/08 18:16:53 by dlascaba          #+#    #+#             */
+/*   Updated: 2021/07/13 18:25:37 by dlascaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
 
-void	ft_print_alphabet(void)
+void	show_numb(int nb)
 {
-	char	alpha;
+	int	nb1;
+	int	nb2;
 
-	alpha = 'a';
-	while (alpha <= 'z')
+	nb1 = nb / 10 + 48;
+	nb2 = nb % 10 + 48;
+	write(1, &nb1, 1);
+	write(1, &nb2, 1);
+}
+
+void	ft_print_comb2(void)
+{
+	int	g;
+	int	h;
+
+	g = 0;
+	h = 0;
+	while (g <= 99)
 	{
-		write(1, &alpha, 1);
-		alpha++;
+		h = g + 1;
+		while (h <= 99)
+		{
+			show_numb(g);
+			write(1, " ", 1);
+			show_numb(h);
+			if (!(g == 98 && h == 99))
+			{
+				write(1, ",", 2);
+			}
+			h++;
+		}
+		g++;
 	}
 }
