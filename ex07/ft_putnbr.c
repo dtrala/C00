@@ -6,7 +6,7 @@
 /*   By: dlascaba <marvin@42lausanne.ch>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/08 18:31:06 by dlascaba          #+#    #+#             */
-/*   Updated: 2021/07/12 23:13:45 by dlascaba         ###   ########.fr       */
+/*   Updated: 2021/07/13 20:55:32 by dlascaba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	rec(int nb)
 {
-	char ch;
+	char	ch;
 
 	if (nb == 0)
 		return ;
@@ -25,7 +25,7 @@ void	rec(int nb)
 
 void	ft_putnbr(int nb)
 {
-	char ch;
+	char	ch;
 
 	if (nb < 0)
 	{
@@ -40,10 +40,3 @@ void	ft_putnbr(int nb)
 	}
 	write(1, &ch, 1);
 }
-
-int main()
-{
-	ft_putnbr(0);
-	return (0);
-}
-
